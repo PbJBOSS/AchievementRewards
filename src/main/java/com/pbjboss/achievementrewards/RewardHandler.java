@@ -19,7 +19,9 @@ public class RewardHandler
     public static void rewardPlayer(EntityPlayerMP playerMP)
     {
         ItemStack reward = new ItemStack(validItems.get((int) (Math.random() * validItems.size())));
-        reward.stackSize = (int) (Math.random() * reward.getItem().getItemStackLimit());
+        reward.stackSize = (int) (Math.random() * reward.getItem().getItemStackLimit() + 1);
+
+        AchievementRewards.logger.info(String.format("Giving Player %s: %s stacksize: %s", playerMP.getDisplayName(), reward.getDisplayName(), reward.stackSize));
 
         addStackToInventory(reward, playerMP);
     }
