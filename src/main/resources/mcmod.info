@@ -1,6 +1,7 @@
 [
 {
   "modid": "achievementrewards",
+  "modid": "acheivementrewards",
   "name": "Achievement Rewards",
   "description": "Rewards Achievements",
   "version": "${version}",
